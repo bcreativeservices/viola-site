@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Viola Mbise, PMHNP-BC | Psychiatric Mental Health Nurse Practitioner</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Compassionate psychiatric care with Viola Mbise, PMHNP-BC. Telehealth appointments for adults and adolescents.">
+
+  <style>
+    :root {
+      --primary: #4A90E2;
+      --primary-light: #E8F1FB;
+      --warm: #F7F4EF;
+      --accent: #F5C26B;
+      --text: #2F3A45;
+      --muted: #6B7280;
+      --white: #FFFFFF;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: var(--text);
+      background-color: var(--primary-light);
+      line-height: 1.6;
+    }
+
+    a { color: var(--primary); text-decoration: none; }
+
+    header, section { padding: 4rem 1.5rem; }
+
+    .container { max-width: 1100px; margin: 0 auto; }
+
+    /* Navbar */
+    .navbar {
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 1.25rem 1.5rem;
+      background-color: var(--white);
+      border-bottom: 1px solid #e5e7eb;
+      position: sticky; top: 0; z-index: 10;
+    }
+
+    .brand { font-weight: 700; font-size: 1.1rem; color: var(--primary); }
+
+    .nav-links { display: flex; gap: 1.5rem; font-size: 0.95rem; align-items: center; }
+
+    .nav-links a { color: var(--muted); }
+    .nav-links a:hover { color: var(--primary); }
+
+    .btn-primary {
+      display: inline-block; background-color: var(--primary); color: var(--white);
+      padding: 0.75rem 1.5rem; border-radius: 999px; border: none;
+      cursor: pointer; font-size: 0.95rem; font-weight: 600;
+    }
+
+    .btn-primary:hover { background-color: #3a78c0; }
+
+    .btn-outline {
+      display: inline-block; padding: 0.7rem 1.4rem;
+      border-radius: 999px; border: 1px solid var(--primary);
+      color: var(--primary); background-color: transparent;
+      font-size: 0.9rem; font-weight: 500; cursor: pointer;
+    }
+
+    .btn-outline:hover { background-color: var(--primary-light); }
+
+    /* Hero */
+    .hero {
+      background: radial-gradient(circle at top left, #E8F1FB 0, #FFFFFF 40%, #E8F1FB 100%);
+      border-bottom: 1px solid #e5e7eb;
+    }
+
+    .hero-grid {
+      display: grid; grid-template-columns: 1.4fr 1fr;
+      gap: 3rem; align-items: center;
+    }
+
+    .hero-eyebrow {
+      text-transform: uppercase; letter-spacing: 0.12em;
+      font-size: 0.75rem; color: var(--muted); margin-bottom: 0.75rem;
+    }
+
+    .hero h1 { font-size: 2.4rem; margin-bottom: 1rem; color: #111827; }
+
+    .hero-subtitle {
+      font-size: 1.05rem; color: var(--muted);
+      margin-bottom: 1.5rem; max-width: 32rem;
+    }
+
+    .hero-cta { display: flex; gap: 1rem; margin-bottom: 1.5rem; flex-wrap: wrap; }
+
+    .hero-meta { font-size: 0.9rem; color: var(--muted); }
+
+    /* Clean white hero card */
+    .hero-card {
+      background-color: var(--white);
+      border-radius: 1.25rem;
+      padding: 1.75rem;
+      box-shadow: 0 18px 40px rgba(15, 23, 42, 0.08);
+    }
+
+    .hero-card h3 { font-size: 1.1rem; margin-bottom: 0.5rem; }
+    .hero-card p { font-size: 0.9rem; color: var(--muted); margin-bottom: 0.75rem; }
+
+    .hero-tag {
+      display: inline-block; font-size: 0.8rem;
+      padding: 0.25rem 0.6rem; border-radius: 999px;
+      background-color: var(--primary-light); color: var(--primary);
+      border: 1px solid rgba(74,144,226,0.25);
+      margin-right: 0.35rem; margin-bottom: 0.35rem;
+    }
+
+    /* Section titles */
+    h2.section-title {
+      font-size: 1.8rem; margin-bottom: 0.5rem; color: #111827;
+    }
+
+    .section-intro {
+      font-size: 0.98rem; color: var(--muted);
+      max-width: 34rem; margin-bottom: 2rem;
+    }
+
+    /* Services */
+    .services { background-color: var(--primary-light); }
+
+    .services-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .service-card {
+      background-color: var(--white); border-radius: 1rem;
+      padding: 1.5rem; box-shadow: 0 10px 25px rgba(15, 23, 42, 0.04);
+      border: 1px solid #e5e7eb;
+    }
+
+    .service-card h3 { font-size: 1.05rem; margin-bottom: 0.5rem; color: #111827; }
+    .service-card p { font-size: 0.9rem; color: var(--muted); margin-bottom: 0.75rem; }
+
+    /* Short Bio */
+    .short-bio {
+      background-color: var(--warm);
+      border-top: 1px solid #e5e7eb;
+      border-bottom: 1px solid #e5e7eb;
+    }
+
+    .short-bio-inner {
+      display: grid;
+      grid-template-columns: 1fr 0.8fr;
+      gap: 2.5rem;
+      align-items: start;
+    }
+
+    .short-bio-text p { font-size: 0.98rem; color: var(--muted); margin-bottom: 1rem; }
+
+    .short-bio-highlight {
+      font-size: 0.9rem; color: var(--text);
+      background-color: var(--white);
+      padding: 0.75rem 1rem; border-radius: 0.75rem;
+      border: 1px solid #e5e7eb;
+    }
+
+    .short-bio-meta { font-size: 0.85rem; color: var(--muted); margin-top: 0.75rem; }
+
+    .short-bio-badge {
+      display: inline-block; font-size: 0.8rem;
+      padding: 0.25rem 0.6rem; border-radius: 999px;
+      background-color: var(--primary-light);
+      border: 1px solid #d1d5db; margin-right: 0.35rem;
+      margin-bottom: 0.35rem; color: var(--text);
+    }
+
+    .portrait-wrapper { display: flex; justify-content: center; align-items: start; }
+
+    .portrait-circle {
+      width: 220px; height: 220px; border-radius: 50%;
+      object-fit: cover; border: 4px solid var(--white);
+      box-shadow: 0 18px 40px rgba(15, 23, 42, 0.18);
+      background-color: #dbeafe;
+    }
+
+    /* Full Bio */
+    .full-bio { background-color: var(--primary-light); }
+
+    .full-bio-grid {
+      display: grid;
+      grid-template-columns: 1fr 0.8fr;
+      gap: 2.5rem;
+      align-items: start;
+    }
+
+    .full-bio-portrait-card {
+      background-color: var(--white);
+      border-radius: 1.25rem;
+      padding: 1.5rem;
+      box-shadow: 0 16px 35px rgba(15, 23, 42, 0.08);
+      text-align: center;
+    }
+
+    .full-bio-portrait-card .portrait-circle {
+      width: 200px; height: 200px; margin-bottom: 0.75rem;
+    }
+
+    /* Reviews */
+    .reviews-section {
+      background-color: var(--white);
+      border-top: 1px solid #e5e7eb;
+      border-bottom: 1px solid #e5e7eb;
+    }
+
+    .zocdoc-reviews-widget {
+      margin-top: 1rem; padding: 1.5rem;
+      border-radius: 1rem; border: 1px dashed #cbd5e1;
+      background-color: #f9fafb; font-size: 0.9rem; color: var(--muted);
+      text-align: center;
+    }
+
+    /* Contact */
+    .contact-section { background-color: var(--warm); }
+
+    .contact-grid {
+      display: grid; grid-template-columns: 1.2fr 1fr;
+      gap: 2rem; margin-top: 1rem;
+    }
+
+    /* Footer */
+    footer {
+      padding: 1.5rem; text-align: center;
+      font-size: 0.8rem; color: var(--muted);
+      background-color: var(--white);
+      border-top: 1px solid #e5e7eb;
+    }
+
+    /* Responsive */
+    @media (max-width: 900px) {
+      .hero-grid,
+      .short-bio-inner,
+      .full-bio-grid,
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="brand">Viola Mbise, PMHNP-BC</div>
+    <div class="nav-links">
+      <a href="#hero">Home</a>
+      <a href="#services">Services</a>
+      <a href="#short-bio">About</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#contact">Contact</a>
+      <a href="#contact" class="btn-outline">Book Online</a>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <header id="hero" class="hero">
+    <div class="container hero-grid">
+      <div>
+        <div class="hero-eyebrow">Psychiatric Mental Health Care</div>
+        <h1>Compassionate, evidence-based care for your mental wellness.</h1>
+        <p class="hero-subtitle">
+          Personalized psychiatric care with a focus on listening, collaboration, and treatment
+          plans tailored to your unique needs.
+        </p>
+        <div class="hero-cta">
+          <a href="#contact" class="btn-primary">Book an Appointment</a>
+          <a href="#short-bio" class="btn-outline">Learn more about Viola</a>
+        </div>
+        <p class="hero-meta">
+          Telehealth appointments available. Adults and adolescents. Medication
+          management and ongoing support.
+        </p>
+      </div>
+
+      <!-- Clean white hero card -->
+      <div class="hero-card">
+        <h3>Meet Viola Mbise, PMHNP-BC</h3>
+        <p>
+          Board-certified Psychiatric Mental Health Nurse Practitioner providing thoughtful,
+          patient-centered care for a wide range of mental health conditions.
+        </p>
+        <div>
+          <span class="hero-tag">Anxiety</span>
+          <span class="hero-tag">Depression</span>
+          <span class="hero-tag">ADHD</span>
+          <span class="hero-tag">Mood Disorders</span>
+          <span class="hero-tag">Telehealth</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Services -->
+  <section id="services" class="services">
+    <div class="container">
+
+      <!-- FIXED SERVICES BANNER -->
+      <div class="bg-image overlay-soft-blue"
+           style="background-image: url('ViolaWebsite3.png'); height: 260px; margin-bottom: 2rem;">
+      </div>
+
+      <h2 class="section-title">Services</h2>
+      <p class="section-intro">
+        Comprehensive psychiatric services designed to support you through every stage of
+        your mental health journey.
+      </p>
+
+      <div class="services-grid">
+        <div class="service-card">
+          <h3>Psychiatric Evaluation</h3>
+          <p>A thorough assessment to understand your symptoms, history, and goals.</p>
+        </div>
+
+        <div class="service-card">
+          <h3>Medication Management</h3>
+          <p>Ongoing support to ensure medications are effective and well‑tolerated.</p>
+        </div>
+
+        <div class="service-card">
+          <h3>Follow-Up Visits</h3>
+          <p>Regular check‑ins to review progress and adjust treatment.</p>
+        </div>
+
+        <div class="service-card">
+          <h3>Telehealth Appointments</h3>
+          <p>Secure virtual visits from the comfort of your home.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Viola -->
+  <section id="short-bio" class="short-bio">
+    <div class="container short-bio-inner">
+
+      <div class="short-bio-text">
+        <h2 class="section-title">About Viola</h2>
+        <p>
+          Viola Mbise, PMHNP-BC, is a board-certified Psychiatric Mental Health Nurse
+          Practitioner dedicated to providing compassionate, non-judgmental care.
+        </p>
+        <p>
+          Her approach is grounded in evidence-based practice, cultural sensitivity, and a deep
+          respect for each person's lived experience.
+        </p>
+        <div class="short-bio-highlight">
+          Viola believes that mental health care should feel safe, collaborative, and
+          empowering—never rushed or one-size-fits-all.
+        </div>
+        <p class="short-bio-meta">
+          Board-certified · Telehealth-focused · Serving adults and adolescents
+        </p>
+        <div style="margin-top:0.75rem;">
+          <span class="short-bio-badge">Board-Certified PMHNP-BC</span>
+          <span class="short-bio-badge">Evidence-Based Care</span>
+          <span class="short-bio-badge">Patient-Centered</span>
+          <span class="short-bio-badge">Telehealth</span>
+        </div>
+      </div>
+
+      <div class="portrait-wrapper">
+        <img src="VioplaProfile.jpg" alt="Portrait of Viola Mbise, PMHNP-BC" class="portrait-circle">
+      </div>
+    </div>
+  </section>
+
+  <!-- Full Biography -->
+  <section id="full-bio" class="full-bio">
+    <div class="container full-bio-grid">
+
+      <div>
+        <h2 class="section-title">Full Biography</h2>
+        <p>
+          Viola Mbise, PMHNP-BC, is a Psychiatric Mental Health Nurse Practitioner with
+          advanced training in the assessment, diagnosis, and treatment of mental health
+          conditions across the lifespan.
+        </p>
+        <p>
+          She emphasizes a collaborative, whole-person approach and integrates each patient's
+          strengths and challenges into a tailored treatment plan.
+        </p>
+        <p>
+          Patients describe Viola as warm, attentive, and easy to talk to.
+        </p>
+
+        <h3 style="margin-top:1.25rem;">Clinical Focus</h3>
+        <ul class="bio-list">
+          <li>Anxiety and panic disorders</li>
+          <li>Depression and mood disorders</li>
+          <li>ADHD</li>
+          <li>Stress and adjustment-related concerns</li>
+        </ul>
+
+        <h3 style="margin-top:1.25rem;">Approach to Care</h3>
+        <ul class="bio-list">
+          <li>Evidence-based medication management</li>
+          <li>Collaborative decision-making</li>
+          <li>Respect for cultural background</li>
+          <li>Focus on long-term wellness</li>
+        </ul>
+
+        <h3 style="margin-top:1.25rem;">Education & Credentials</h3>
+        <ul class="bio-list">
+          <li>Board-Certified PMHNP-BC</li>
+          <li>Advanced psychiatric assessment training</li>
+          <li>Ongoing professional development</li>
+        </ul>
+      </div>
+
+      <div>
+        <div class="full-bio-portrait-card">
+          <img src="VioplaProfile.jpg" alt="Portrait of Viola Mbise, PMHNP-BC" class="portrait-circle">
+          <p>
+            "My goal is to create a space where you feel heard, understood, and supported as we
+            work together toward your mental wellness."
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Reviews -->
+  <section id="reviews" class="reviews-section">
+    <div class="container">
+
+      <div class="bg-image overlay-soft-blue"
+           style="background-image: url('ViolaWebsite5.png'); height: 260px; margin-bottom: 2rem;">
+      </div>
+
+      <h2 class="section-title">Patient Reviews</
